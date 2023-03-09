@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="list">List</string>
+    <string name="favorite">Favorite</string>
+    <string name="search">Search</string>
+    <string name="user">User</string>
+    <string name="details">Details</string>
+    <string name="no_favorite_wallpaper">No Favorite Wallpaper</string>
+    <string name="delete_favorite_menu">Delete All</string>
+    <string name="save_to_favorites">Save to Favorites</string>
+    <string name="download">Download</string>
+</resources>

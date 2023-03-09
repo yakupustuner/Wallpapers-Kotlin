@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="wallpapersViewModel"
+            type="com.learn.wallpapers_kotlin.viewmodel.WallpapersViewModel" />
+
+        <variable
+            name="fAdapter"
+            type="com.learn.wallpapers_kotlin.adapter.FavoriteWallpapersAdapter" />
+    </data>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F4F6F6"
+        tools:context=".view.FavoriteWallpapersFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView_favorites"
+            setData="@{fAdapter}"
+            setVisibility="@{wallpapersViewModel.readFavoriteWallpapers}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/error_imageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            setVisibility="@{wallpapersViewModel.readFavoriteWallpapers}"
+            android:alpha="0.6"
+            android:src="@drawable/ic_error"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/recyclerView_favorites"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/recyclerView_favorites"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.19999999" />
+
+        <TextView
+            android:id="@+id/error_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            setVisibility="@{wallpapersViewModel.readFavoriteWallpapers}"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="@string/no_favorite_wallpaper"
+            android:layout_marginTop="8dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/error_imageView"
+            app:layout_constraintStart_toStartOf="@+id/error_imageView"
+            app:layout_constraintTop_toBottomOf="@+id/error_imageView" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Wallpapers-Kotlin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="list">List</string>
+    <string name="favorite">Favorite</string>
+    <string name="search">Search</string>
+    <string name="user">User</string>
+    <string name="details">Details</string>
+    <string name="no_favorite_wallpaper">No Favorite Wallpaper</string>
+    <string name="delete_favorite_menu">Delete All</string>
+    <string name="save_to_favorites">Save to Favorites</string>
+    <string name="download">Download</string>
+</resources>
